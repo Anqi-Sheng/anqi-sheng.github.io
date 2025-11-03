@@ -154,8 +154,13 @@
   </section>
 
   <!-- 1️⃣ Place an <audio> element somewhere in your body (or in a hidden div). -->
-<audio id="bg-music" src="music/LJShopKeeperRemix1.mp3" autoplay loop unmuted></audio>
+<audio controls preload="auto">
+  <source src="music/LJShopKeeperRemix1.mp3" type="audio/mpeg">
+  <!-- Fallback text -->
+  Your browser does not support the audio tag.
+</audio>
 
+<!-- <audio id="bg-music" src="music/LJShopKeeperRemix1.mp3" controls autoplay loop="loop" unmuted></audio>
  <!-- ======= Video Section ======= -->
  <video id="ohsweet5" width="640" height="360" controls autoplay loop muted>
   <source src="videos/ohsweet5.mp4" type="video/mp4">
