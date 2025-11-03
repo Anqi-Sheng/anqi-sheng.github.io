@@ -1,0 +1,128 @@
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f7fa;
+}
+a { text-decoration: none; color: inherit; }
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    padding: 1rem 2rem;
+}
+nav .logo { font-weight: 700; font-size: 1.25rem; }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+nav a:hover { color: #1e88e5; }
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #1e88e5, #42a5f5);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 70vh;
+}
+.hero button {
+    background: #fff;
+    color: #1e88e5;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hero button:hover { background: #e3f2fd; transform: translateY(-2px); }
+
+/* Services Grid */
+.grid { display: grid; gap: 2rem; padding: 2rem; }
+@media (min-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    transition: transform .2s, box-shadow .2s;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+
+/* Contact */
+form { display: grid; gap: 1rem; padding: 1rem; }
+form input, form textarea {
+    border: 1px solid #ccc;
+    border-radius: 34px;
+    padding: 0.75rem;
+}
+form button {
+    background: #1e88e5;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background .2s;
+}
+form button:hover { background: #1565c0; }
+
+/* Footer */
+footer {
+    background: #1e88e5;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Floating Music Button */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+.music-btn.visible { opacity: 1; }
+.music-btn.hidden { opacity: 0; pointer-events: none; }
+.music-btn:hover {
+    background: #42a5f5;
+    transform: scale(1.1);
+}
+
+/* Pulsing RGB Glow Animation */
+@keyframes pulseRGB {
+    0%   { box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8); background: rgba(255, 0, 0, 0.8); }
+    25%  { box-shadow: 0 0 20px 6px rgba(0, 255, 0, 0.8); background: rgba(0, 255, 0, 0.8); }
+    50%  { box-shadow: 0 0 25px 7px rgba(0, 0, 255, 0.8); background: rgba(0, 0, 255, 0.8); }
+    75%  { box-shadow: 0 0 20px 6px rgba(255, 0, 255, 0.8); background: rgba(255, 0, 255, 0.8); }
+    100% { box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8); background: rgba(255, 0, 0, 0.8); }
+}
+
+.music-btn.playing {
+    animation: pulseRGB 4s infinite alternate;
+    transform: scale(1.05);
+}
