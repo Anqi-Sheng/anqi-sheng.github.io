@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LJ Hell Portal</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">MyBrand</div>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero center">
+    <h2>Welcome to Buy a LJ</h2>
+    <p>Delivering only the finest LJisms and quirks since 1995!</p>
+    <button id="ctaBtn">Get Started</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="center">About Me</h2>
+    <p class="center">Hello I am just LJ and it's nice to meet you! Join me on my adventures won't you?</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2 class="center">My Services ;)</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Responsive, modern websites built with the latest tech.</p>
+      </div>
+      <div class="card">
+        <h3>UX/UI Design</h3>
+        <p>User-centric designs that delight and convert.</p>
+      </div>
+      <div class="card">
+        <h3>SEO & Analytics</h3>
+        <p>Optimized for search, driven by data.</p>
+      </div>
+      <div class="card">
+        <h3>Consulting</h3>
+        <p>Strategic guidance for tech adoption and growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audio -->
+  <audio id="bg-music" src="music/LJShopKeeperRemix1.mp3" preload="auto"></audio>
+  <button id="music-toggle" class="music-btn" title="Play Music">▶️</button>
+
+  <!-- ======= Video Section ======= -->
+<section id="video-section" class="center">
+  <h2>Check Out the LJ Vibe</h2>
+  <video id="portalVideo" width="640" height="360" controls autoplay loop muted playsinline>
+    <source src="videos/ohsweet5.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2 class="center">Contact Me Please... I'm lonely</h2>
+    <div class="center">
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Javamochi. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+>
